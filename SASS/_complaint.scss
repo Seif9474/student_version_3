@@ -1,0 +1,224 @@
+.complaint {
+  position: absolute;
+  bottom: 0;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  background-color: $secondary_bg_color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  @include desktop {
+    top: 60px;
+    left: 240px;
+  }
+
+  @include tablet{
+    left: 0;
+   }
+
+  .exchang_messages {
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar{
+      width: 3px;
+    }
+ 
+    .user_message {
+      display: flex;
+       justify-content: end;
+      flex-direction: row-reverse;
+      gap: 20px;
+      margin: 10px 0;
+
+      @include desktop {
+        gap: 10px;
+      }
+
+      .img {
+        width: 85px;
+        height: 85px;
+
+        @include desktop {
+          width: 45px;
+          height: 45px;
+        }
+
+        @include tablet-mini{
+            width: 35px;
+            height: 35px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: scale-down;
+        }
+      }
+
+      .message {
+        background: $white_color;
+        color: $main_color;
+        font-size: 25px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 35px 35px 35px 0;
+        height: auto;
+        max-width: 550px;
+        line-height: 1.2;
+    
+       
+
+        @include desktop{
+            font-size: 18px;
+            display: flex;
+            font-weight: 500;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+
+        @include tablet-mini{
+            font-size: 12px;
+            line-height: 1.1;
+            border-radius: 15px 15px 15px 0;
+
+        }
+
+        @include mobile{
+          max-width: 230px;
+        }
+      }
+    }
+
+    .ai_message {
+      display: flex;
+       gap: 20px;
+       margin: 10px 0;
+
+
+      @include desktop{
+        gap: 10px;
+      }
+
+      .img {
+        width: 85px;
+        height: 85px;
+
+        @include desktop {
+          width: 45px;
+          height: 45px;
+        }
+
+        @include tablet-mini{
+            width: 35px;
+            height: 35px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .message {
+        background: $linear_bg_color;
+        color: $white_color;
+        font-size: 25px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 35px 35px 35px 0;
+        max-width: 550px;
+        line-height: 1.2;
+        height: auto;
+ 
+        @include desktop{
+            font-size: 18px;
+            display: flex;
+            font-weight: 500;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+
+        @include tablet-mini{
+            font-size: 12px;
+            line-height: 1.1;
+            border-radius: 15px 15px 15px 0;
+
+        }
+
+        @include mobile{
+          max-width: 230px;
+        }
+      }
+    }
+  }
+
+  .write_message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 65px;
+
+    @include desktop{
+        height: 45px;
+    }
+
+    @include tablet-mini{
+        height: 30px;
+    }
+
+    input {
+      height: 100%;
+      flex: 1;
+      border-radius: 35px;
+      font-size: 24px;
+      padding: 20px 30px;
+      color: $text_color;
+      
+      @include desktop{
+        font-size: 18px;
+      }
+
+      @include tablet-mini {
+        font-size: 12px;
+      }
+    }
+
+    .img {
+      background-color: $main_color;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @include desktop{
+        width: 45px;
+        height: 45px;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+
+        @include desktop{
+            width: 18px;
+            height: 18px;
+
+        }
+      }
+    }
+  }
+}

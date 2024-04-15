@@ -1,0 +1,269 @@
+.course {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  padding: 30px;
+  background-color: $third_bg_color;
+  bottom: 0;
+
+  @include desktop {
+    left: 240px;
+    top: 60px;
+    padding: 20px;
+    bottom: auto;
+  }
+
+  @include tablet {
+    left: 0;
+  }
+
+  .course_continer {
+    padding: 20px;
+    border: 1px solid $main_color;
+    border-radius: 15px;
+    background-color: $white_color;
+    animation: scaling 1s ease;
+
+    h2 {
+      font-family: "Baloo Tammudu 2", system-ui;
+      font-size: 30px;
+      font-weight: 700;
+      color: $main_color;
+
+      @include desktop {
+        font-size: 20px;
+      }
+
+      @include tablet {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: -10px;
+
+      @include desktop {
+        margin-top: -10px;
+      }
+
+      @include tablet-mini {
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      li {
+        border: 1px solid $main_color;
+        border-radius: 8px;
+        color: $main_color;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: $main_tarnsition;
+
+        &:active{
+          transform: scale(0.9)
+        }
+
+        @include tablet {
+          width: 100%;
+          text-align: center;
+        }
+
+        @include desktop {
+          font-size: 12px;
+          padding: 8px 20px;
+        }
+
+        &.active {
+          background-color: $main_color;
+          color: $white_color;
+        }
+      }
+    }
+
+    .grades {
+      border: 1px solid $main_color;
+      border-radius: 15px;
+      margin-top: 25px;
+
+      @include desktop {
+        margin-top: 15px;
+      }
+
+      h3 {
+        color: $main_color;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        padding-top: 10px;
+        border-bottom: 1px solid $main_color;
+
+        @include desktop {
+          font-size: 15px;
+        }
+      }
+
+      .grade_numbers {
+        display: flex;
+        align-items: center;
+
+        .subject {
+          width: calc(100% / 5);
+          height: 120px;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+          color: $dark_color;
+          &:not(:last-child) {
+            border-right: 1px solid $main_color;
+          }
+
+          @include desktop {
+            height: 100px;
+          }
+
+          @include tablet-mini {
+            font-size: 12px;
+          }
+
+          @include mobile {
+            font-size: 10px;
+            height: 60px;
+          }
+
+          .level {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $main_color;
+
+            @include desktop {
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+
+            @include mobile {
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+
+          .number {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            @include desktop {
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+
+            @include mobile {
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .description_supject {
+      margin-top: 20px;
+      border-radius: 15px;
+      border: 1px solid $main_color;
+      min-height: 180px;
+
+      @include desktop {
+        min-height: 140px;
+      }
+
+      h2 {
+        color: $main_color;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        padding-top: 10px;
+        border-bottom: 1px solid $main_color;
+
+        @include desktop {
+          font-size: 15px;
+        }
+      }
+
+      .text {
+        font-size: 16px;
+        padding: 20px;
+        color: $dark_color;
+
+        @include desktop {
+          font-size: 13px;
+          padding: 15px;
+        }
+
+        @include mobile {
+          font-size: 10px;
+          padding-top: 0px;
+
+        }
+      }
+    }
+
+    .goals {
+      margin-top: 20px;
+      border-radius: 15px;
+      border: 1px solid $main_color;
+      min-height: 180px;
+
+      @include desktop {
+        min-height: 140px;
+      }
+
+      h2 {
+        color: $main_color;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        padding-top: 10px;
+        border-bottom: 1px solid $main_color;
+
+        @include desktop {
+          font-size: 15px;
+        }
+      }
+
+      .text {
+        font-size: 16px;
+        padding: 20px;
+
+        @include desktop {
+          font-size: 13px;
+          padding: 15px;
+        }
+
+        @include mobile {
+          font-size: 10px;
+          padding-top: 0px;
+        }
+
+        p {
+          margin-bottom: 10px;
+          color: $dark_color;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.7);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,615 @@
+
+.welcome_page {
+  position: relative;
+
+  .nav_bar {
+    width: 100%;
+    @include center_between_flex;
+    background-color: $white_color;
+    padding: 20px 23px;
+    height: 80px;
+
+    .logo {
+      @include center_flex;
+      gap: 10px;
+      animation: scaling 1s ease;
+
+      .img {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      h3 {
+        font-family: "Baloo Tammudu 2", system-ui;
+        font-size: 25px;
+        color: $main_color;
+        margin-top: 12px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .welcome_page_features {
+    min-height: calc(1024px - 80px);
+    background: $linear_bg_color;
+    padding-top: 30px;
+
+    .welcome_message {
+      padding-left: 100px;
+      padding-right: 100px;
+
+      @include tablet {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @include tablet-mini {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .content {
+        background-color: $white_color;
+        @include center_between_flex;
+        margin: auto;
+        border-radius: 15px;
+        height: 233px;
+        animation: scaling 1s ease;
+
+
+        @include desktop {
+          height: 170px;
+        }
+
+        @include tablet-mini {
+          height: 140px;
+        }
+
+        @include mobile {
+          height: auto;
+          flex-direction: column;
+          padding-bottom: 20px;
+        }
+
+        .left {
+          @include center_flex;
+          gap: 30px;
+          height: 100%;
+
+          @include tablet {
+            gap: 0;
+          }
+
+          .img {
+            height: 100%;
+
+            @include tablet-mini {
+              width: 160px;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .text {
+            color: $main_color;
+
+            h2 {
+              font-family: "Baloo Tammudu 2", system-ui;
+              font-size: 45px;
+              line-height: 1.7;
+
+              @include desktop {
+                font-size: 30px;
+              }
+
+              @include tablet {
+                font-size: 25px;
+              }
+
+              @include mobile {
+                font-size: 18px;
+                line-height: 1;
+              }
+            }
+
+            h4 {
+              font-size: 30px;
+              line-height: 35px;
+
+              @include desktop {
+                font-size: 20px;
+                line-height: 25px;
+              }
+
+              @include tablet {
+                font-size: 14px;
+              }
+              @include mobile {
+                font-size: 10px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+
+        .right {
+          .btn {
+            background: $linear_bg_color;
+            border-radius: $main_border_redius;
+            margin-right: 40px;
+            width: 260px;
+            cursor: pointer;
+            transition: $main_tarnsition;
+
+            &:active {
+              transform: scale(0.9);
+            }
+
+            @include center_flex;
+            height: 80px;
+            gap: 15px;
+
+            @include desktop {
+              width: 200px;
+              height: 60px;
+              border-radius: 20px;
+            }
+
+            @include tablet {
+              height: 60px;
+            }
+
+            @include tablet-mini {
+              height: 60px;
+              width: 150px;
+              margin-right: 10px;
+            }
+
+            @include mobile {
+              width: 200px;
+              height: 50px;
+              border-radius: 10px;
+            }
+
+            .img {
+              img {
+                width: 30px;
+              }
+            }
+
+            p {
+              color: $white_color;
+              font-size: 35px;
+
+              @include desktop {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .features {
+      padding-left: 170px;
+      padding-right: 170px;
+
+      @include tablet {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @include tablet-mini {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .all_features {
+        @include center_flex;
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 30px;
+        padding-top: 50px;
+
+        @include desktop {
+          padding-top: 30px;
+          padding-bottom: 0;
+        }
+
+        @include tablet {
+          gap: 20px;
+        }
+
+        .feature {
+          a {
+            background-color: $secondary_bg_color;
+            width: 250px;
+            height: 110px;
+            border-radius: 15px;
+            padding: 20px;
+            padding-right: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+            transition: $main_tarnsition;
+            animation: scaling 1s ease;
+
+
+            &:active {
+              transform: scale(0.9);
+            }
+
+            @include desktop {
+              width: 180px;
+              height: 90px;
+            }
+
+            @include mobile {
+              width: 160px;
+              height: 90px;
+            }
+
+            .img {
+              display: inline-block;
+
+              img {
+                @include desktop {
+                  width: 50px;
+                }
+              }
+            }
+
+            .text {
+              p {
+                font-size: 25px;
+                color: $main_color;
+                font-weight: 600;
+
+                @include desktop {
+                  font-size: 18px;
+                }
+
+                @include mobile {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image_maaref {
+      position: relative;
+      margin-top: 60px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include desktop {
+        margin-top: 30px;
+      }
+
+      @include tablet-large {
+        width: 600px;
+      }
+
+      @include tablet-mini {
+        width: 400px;
+      }
+
+      @include mobile {
+        width: 280px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .img_close {
+        position: absolute;
+        right: 5px;
+        top: -5px;
+        cursor: pointer;
+
+        @include tablet {
+          width: 20px;
+          right: 3px;
+          top: 0px;
+        }
+      }
+    }
+  }
+
+  .setting_menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    z-index: 999;
+    width: 330px;
+    right: 30px;
+    top: 60px;
+    padding: 23px;
+    height: 283px;
+    box-shadow: 0 0 2px $secondary_color;
+    display: none;
+
+    @include tablet-mini {
+      width: 250px;
+      height: 210px;
+    }
+
+    &.block {
+      display: block;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .img {
+        width: 48px;
+        height: 48px;
+
+        @include tablet-mini {
+          height: 40px;
+          width: 40px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $dark_color;
+
+        @include tablet-mini {
+          font-size: 15px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        color: $text_color;
+        margin-top: 5px;
+
+        @include tablet-mini {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .profile,
+    .password {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      cursor: pointer;
+
+      @include tablet-mini {
+        margin-top: 15px;
+      }
+
+      .img {
+        @include tablet-mini {
+          width: 18px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $dark_color;
+
+        @include tablet-mini {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .logout {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      border-top: 1px solid $secondary_color;
+      padding-top: 20px;
+      color: $error_color;
+
+      @include tablet-mini {
+        padding-top: 10px;
+      }
+
+      .img {
+        @include tablet-mini {
+          width: 18px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        @include tablet-mini {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .schedule_overlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    &.block {
+      visibility: visible;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #2121216e;
+    }
+
+    .schedules_container {
+      z-index: 9999999;
+      background-color: $white_color;
+      width: 550px;
+      height: 300px;
+      border-radius: 15px;
+      border: 1px solid $bordre_color;
+
+      @include tablet {
+        width: 450px;
+      }
+
+      @include mobile {
+        height: auto;
+        width: 300px;
+        padding-bottom: 30px;
+      }
+
+      .head {
+        height: 77px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $bordre_color;
+        padding-top: 10px;
+        padding-left: 12px;
+
+        @include tablet {
+          height: 60px;
+        }
+
+        @include mobile {
+          justify-content: center;
+        }
+
+        h2 {
+          font-family: "Baloo Tammudu 2", system-ui;
+          font-size: 28px;
+          color: $main_color;
+
+          @include tablet {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .boxs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+
+        @include mobile {
+          flex-direction: column;
+        }
+
+        .box {
+          width: 240px;
+          height: 160px;
+          border-radius: 15px;
+          background-color: $third_bg_color;
+          border: 1px solid $bordre_color;
+
+          @include tablet {
+            width: 200px;
+          }
+
+          a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            cursor: pointer;
+
+            img {
+              width: 55px;
+              height: 55px;
+
+              @include tablet {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            h3 {
+              font-size: 18px;
+              font-weight: 500;
+              color: $text_color;
+
+              @include tablet {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.7);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

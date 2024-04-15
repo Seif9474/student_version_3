@@ -1,0 +1,571 @@
+.user_profile {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 30px;
+
+  .overlay {
+    &.active {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #a3a3a317;
+      z-index: 99;
+    }
+  }
+
+  .nav_bar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-bottom: 1px solid $bordre_color;
+
+    @include desktop {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: 60px;
+    }
+
+    .icon {
+      cursor: pointer;
+
+      i {
+        color: $main_color;
+        font-size: 30px;
+      }
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .setting_menu {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 15px;
+      z-index: 999;
+      width: 330px;
+      right: 30px;
+      top: 60px;
+      padding: 23px;
+      height: 283px;
+      box-shadow: 0 0 2px $secondary_color;
+      display: none;
+
+      @include desktop {
+        top: 50px;
+        right: 40px;
+      }
+
+      @include tablet {
+        width: 250px;
+        height: 210px;
+      }
+
+      &.block {
+        display: block;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .img {
+          width: 48px;
+          height: 48px;
+
+          @include tablet {
+            height: 40px;
+            width: 40px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          color: $dark_color;
+
+          @include tablet {
+            font-size: 15px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          color: $text_color;
+          margin-top: 5px;
+
+          @include tablet {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .profile,
+      .password {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        cursor: pointer;
+
+        @include tablet {
+          margin-top: 15px;
+        }
+
+        .img {
+          @include tablet {
+            width: 18px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: $dark_color;
+
+          @include tablet {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .logout {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        border-top: 1px solid $secondary_color;
+        padding-top: 20px;
+        color: $error_color;
+
+        @include tablet {
+          padding-top: 10px;
+        }
+
+        .img {
+          @include tablet {
+            width: 18px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          font-size: 16px;
+
+          @include tablet {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $white_color;
+    z-index: 9999;
+    border-right: 1px solid $bordre_color;
+    width: 280px;
+    height: 100%;
+    transition: $main_tarnsition;
+
+    @include desktop {
+      width: 240px;
+    }
+
+    @include tablet {
+      // display: none;
+      left: -100%;
+    }
+
+    &.active {
+      left: 0;
+    }
+
+    .logo {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      padding: 25px;
+      gap: 10px;
+
+      @include desktop {
+        height: 60px;
+        padding: 15px;
+      }
+
+      .img {
+        width: 36px;
+        height: 36px;
+
+        @include desktop {
+          width: 30px;
+          height: 30px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h2 {
+        font-family: "Baloo Tammudu 2", system-ui;
+        font-size: 25px;
+        color: $main_color;
+
+        @include desktop {
+          font-size: 17px;
+        }
+      }
+    }
+
+    ul {
+      padding: 20px;
+
+      @include desktop {
+        padding: 10px;
+      }
+
+      li {
+
+        a {
+          color: $text_color;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          border: 1px solid $bordre_color;
+          border-radius: 8px;
+          height: 55px;
+          gap: 10px;
+          padding: 10px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          transition: $main_tarnsition;
+
+          &:active {
+            transform: scale(0.9);
+          }
+
+          &.active {
+            background-color: $main_color;
+            color: $white_color;
+          }
+
+          @include desktop {
+            font-size: 15px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+
+  // STYLE USER PROFILE
+
+  .container {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 280px;
+    padding: 30px;
+    background-color: $third_bg_color;
+    min-height: calc(100vh - 80px);
+
+    @include desktop {
+      left: 240px;
+      top: 60px;
+      padding: 20px;
+      min-height: calc(100vh - 60px);
+    }
+
+    @include tablet {
+      left: 0;
+    }
+  }
+
+  .profile_content {
+    border: 1px solid $bordre_color;
+    border-radius: 15px;
+    padding: 20px;
+
+    background-color: $white_color;
+
+    h2 {
+      color: $main_color;
+      font-family: "Baloo Tammudu 2", system-ui;
+      font-size: 30px;
+
+      @include desktop {
+        font-size: 25px;
+      }
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    .profile_photo {
+      text-align: center;
+      position: relative;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+
+      @include desktop {
+        margin-top: -10px;
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999999999;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .photo {
+        width: 114px;
+        height: 114px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktop {
+          width: 80px;
+          height: 80px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $secondary_color;
+        margin-top: 10px;
+
+        @include desktop {
+          font-size: 12px;
+        }
+      }
+    }
+
+    form {
+      .input {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+          gap: 0px;
+        }
+
+        &.passwors_input {
+          margin-bottom: 20px;
+          position: relative;
+          width: fit-content;
+
+          @include mobile {
+            width: 100%;
+          }
+
+          input {
+            width: 477px;
+            height: 60px;
+            border-radius: 8px;
+
+            @include mobile {
+              width: 100%;
+            }
+          }
+
+          .img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            z-index: 2;
+            width: 50px;
+            background: #fff;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+
+        label {
+          color: $main_color;
+          font-size: 24px;
+          font-family: "Baloo Tammudu 2", system-ui;
+          font-weight: 800;
+          margin-bottom: -15px;
+
+          @include desktop {
+            font-size: 17px;
+            margin-bottom: -10px;
+          }
+        }
+
+        input {
+          color: $dark_color;
+          border: 1px solid $bordre_color;
+          border-radius: 10px;
+          width: 600px;
+          height: 48px;
+          padding: 10px;
+          font-size: 16px;
+
+          &::placeholder {
+            font-size: 16px;
+          }
+
+          @include desktop {
+            height: 40px;
+            width: 550px;
+          }
+
+          @include mobile {
+            width: 100%;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-family: "Baloo Tammudu 2", system-ui;
+          margin-top: 5px;
+          font-weight: 700;
+          color: $secondary_color;
+
+          @include desktop {
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .multy_inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        @include mobile {
+          flex-direction: column;
+          margin-top: 10px;
+        }
+
+        .input {
+          width: 205px;
+
+          @include mobile {
+            width: 100%;
+            margin-top: 15px;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+
+      .btn {
+        background: $linear_bg_color;
+        color: $white_color;
+        width: 158px;
+        height: 52px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        &.change_password {
+          width: 220px;
+        }
+      }
+    }
+  }
+
+  // STYLE COMPLAINT
+  @import "./_complaint.scss";
+
+  // STYLE QUILITY STANDARDS
+  @import "./quality_standards";
+
+  //STYLE MAPS PAGE
+  @import "./maps";
+
+  // STYLE DEGREES PAGE
+  @import "./degrees";
+
+  //STYLE QUESTIONNAIRE
+  @import "./questionnaire";
+
+  //  STYLE SCHEDULE
+  @import "./schedule";
+
+  //STYLE COURSES
+  @import "./courses";
+}
+
+@keyframes ui_animation {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

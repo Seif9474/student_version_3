@@ -1,0 +1,98 @@
+.maps {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 280px;
+  padding: 20px;
+  background-color: $third_bg_color;
+
+  @include desktop {
+    left: 240px;
+    top: 60px;
+    bottom: auto;
+  }
+
+  @include tablet{
+    left: 0;
+  }
+
+  .maps_container {
+    border: 1px solid $main_color;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: $white_color;
+    animation: scaling 1s ease;
+
+
+
+    @include desktop {
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-family: "Baloo Tammudu 2", system-ui;
+      color: $main_color;
+      font-weight: 700;
+
+      @include mobile{
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+
+    .all_maps {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+
+      @include desktop {
+        padding: 0;
+        gap: 15px;
+      }
+
+      .map {
+        width: 490px;
+        height: 350px;
+        border: 1px solid $bordre_color;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        background-color: $third_bg_color;
+        animation: scaling 1s ease;
+
+        @include desktop {
+          width: calc(100% / 2 - 10px);
+          height: 200px;
+        }
+
+        @include mobile{
+            width: 100%;
+        }
+
+        img {
+          width: 345px;
+          height: 100%;
+          margin: auto;
+
+          @include tablet {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.7);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

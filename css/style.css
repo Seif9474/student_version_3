@@ -1,0 +1,3293 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400..800&family=Inter:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.btn, .btn_submit {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn:active, .btn_submit:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.login_page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../images/loginBG.png");
+  background-position: center;
+  background-size: cover;
+}
+.login_page form {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  width: 450px;
+}
+.login_page form .logo {
+  width: 80px;
+  height: 70px;
+  margin: auto;
+}
+@media (max-width: 1220px) {
+  .login_page form .logo {
+    width: 60px;
+    height: 50px;
+  }
+}
+.login_page form .logo img {
+  width: 100%;
+  height: 100%;
+}
+.login_page form h2 {
+  color: #5872E0;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 40px;
+  margin-top: 60px;
+  text-align: center;
+  font-weight: 900;
+}
+.login_page form h2.forgot_password {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1360px) {
+  .login_page form h2 {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  .login_page form h2.forgot_password {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.login_page form .input_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  position: relative;
+}
+.login_page form .input_container .img {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  width: 50px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+  background: white;
+}
+.login_page form .input_container .img img {
+  width: 30px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container .img img {
+    width: 20px;
+  }
+}
+.login_page form .input_container.error label {
+  color: #eb0000;
+}
+.login_page form .input_container.error input {
+  border-color: #eb0000;
+}
+.login_page form .input_container.error .img img {
+  display: block;
+}
+.login_page form .input_container label {
+  color: #5872e0;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container label {
+    font-size: 15px;
+  }
+}
+.login_page form .input_container input {
+  border: 2px solid #5872e0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  height: 50px;
+  font-size: 18px;
+  color: #a3a3a3;
+  font-weight: 500;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container input {
+    font-size: 15px;
+    height: 45px;
+  }
+}
+.login_page form .input_container input::-webkit-input-placeholder {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.login_page form .input_container input::-moz-placeholder {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.login_page form .input_container input:-ms-input-placeholder {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.login_page form .input_container input::-ms-input-placeholder {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.login_page form .input_container input::placeholder {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .login_page form .input_container input::-moz-placeholder {
+    font-size: 15px;
+  }
+  .login_page form .input_container input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .login_page form .input_container input::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .login_page form .input_container input::placeholder {
+    font-size: 15px;
+  }
+}
+.login_page form .input_container input[type=password] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  font-size: 20px;
+}
+.login_page form .input_container .spans {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  top: 50px;
+  left: 20px;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container .spans {
+    gap: 3px;
+  }
+}
+.login_page form .input_container .spans span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a3a3a3;
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container .spans span {
+    width: 6px;
+    height: 6px;
+  }
+}
+@media (max-width: 1360px) {
+  .login_page form .input_container {
+    margin-bottom: 20px;
+  }
+}
+.login_page form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.login_page form .remember .checkbox {
+  width: 60px;
+  height: 20px;
+  border: 2px solid #5872e0;
+  position: relative;
+  border-radius: 10px;
+}
+@media (max-width: 1360px) {
+  .login_page form .remember .checkbox {
+    height: 17px;
+    width: 50px;
+  }
+}
+.login_page form .remember .checkbox::before {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 90%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 2px;
+  background-color: #5872e0;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.login_page form .remember .checkbox.active {
+  background-color: #d9e5ff;
+}
+.login_page form .remember .checkbox.active::before {
+  left: 20px;
+}
+.login_page form .remember p {
+  color: #5872e0;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1360px) {
+  .login_page form .remember p {
+    font-size: 15px;
+  }
+}
+.login_page form .login {
+  margin-top: 100px;
+  text-align: center;
+  background-color: #5872e0;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.login_page form .login.send {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+@media (max-width: 1360px) {
+  .login_page form .login.send {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 1360px) {
+  .login_page form .login {
+    margin-top: 70px;
+  }
+}
+.login_page form .login h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.login_page form a {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #5e5e5e;
+  width: 100%;
+  display: block;
+}
+@media (max-width: 1360px) {
+  .login_page form {
+    width: 350px;
+    padding: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .login_page form {
+    width: 300px;
+  }
+}
+
+.welcome_page {
+  position: relative;
+}
+.welcome_page .nav_bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  padding: 20px 23px;
+  height: 80px;
+}
+.welcome_page .nav_bar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+.welcome_page .nav_bar .logo .img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.welcome_page .nav_bar .logo .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.welcome_page .nav_bar .logo h3 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 25px;
+  color: #5872e0;
+  margin-top: 12px;
+}
+@media (max-width: 425px) {
+  .welcome_page .nav_bar .logo h3 {
+    font-size: 20px;
+  }
+}
+.welcome_page .nav_bar .avatar {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.welcome_page .nav_bar .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.welcome_page .welcome_page_features {
+  min-height: 944px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  padding-top: 30px;
+}
+.welcome_page .welcome_page_features .welcome_message {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .welcome_message {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .welcome_message {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  border-radius: 15px;
+  height: 233px;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .welcome_message .content {
+    height: 170px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .welcome_message .content {
+    height: 140px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .welcome_message .content {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left {
+    gap: 0;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .left .img {
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .img {
+    width: 160px;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .left .img img {
+  height: 100%;
+  width: 100%;
+}
+.welcome_page .welcome_page_features .welcome_message .content .left .text {
+  color: #5872e0;
+}
+.welcome_page .welcome_page_features .welcome_message .content .left .text h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 45px;
+  line-height: 1.7;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h2 {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .left .text h4 {
+  font-size: 30px;
+  line-height: 35px;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .welcome_message .content .left .text h4 {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .right .btn {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  border-radius: 24px;
+  margin-right: 40px;
+  width: 260px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  gap: 15px;
+}
+.welcome_page .welcome_page_features .welcome_message .content .right .btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .welcome_message .content .right .btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .welcome_message .content .right .btn {
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .welcome_message .content .right .btn {
+    height: 60px;
+    width: 150px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .welcome_message .content .right .btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}
+.welcome_page .welcome_page_features .welcome_message .content .right .btn .img img {
+  width: 30px;
+}
+.welcome_page .welcome_page_features .welcome_message .content .right .btn p {
+  color: #fff;
+  font-size: 35px;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .welcome_message .content .right .btn p {
+    font-size: 20px;
+  }
+}
+.welcome_page .welcome_page_features .features {
+  padding-left: 170px;
+  padding-right: 170px;
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .features {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .features {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.welcome_page .welcome_page_features .features .all_features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  gap: 30px;
+  padding-top: 50px;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .features .all_features {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .features .all_features {
+    gap: 20px;
+  }
+}
+.welcome_page .welcome_page_features .features .all_features .feature a {
+  background-color: #d9e5ff;
+  width: 250px;
+  height: 110px;
+  border-radius: 15px;
+  padding: 20px;
+  padding-right: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  gap: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+.welcome_page .welcome_page_features .features .all_features .feature a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .features .all_features .feature a {
+    width: 180px;
+    height: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .features .all_features .feature a {
+    width: 160px;
+    height: 90px;
+  }
+}
+.welcome_page .welcome_page_features .features .all_features .feature a .img {
+  display: inline-block;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .features .all_features .feature a .img img {
+    width: 50px;
+  }
+}
+.welcome_page .welcome_page_features .features .all_features .feature a .text p {
+  font-size: 25px;
+  color: #5872e0;
+  font-weight: 600;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .features .all_features .feature a .text p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .features .all_features .feature a .text p {
+    font-size: 15px;
+  }
+}
+.welcome_page .welcome_page_features .image_maaref {
+  position: relative;
+  margin-top: 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1360px) {
+  .welcome_page .welcome_page_features .image_maaref {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1220px) {
+  .welcome_page .welcome_page_features .image_maaref {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .welcome_page_features .image_maaref {
+    width: 400px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .welcome_page_features .image_maaref {
+    width: 280px;
+  }
+}
+.welcome_page .welcome_page_features .image_maaref img {
+  width: 100%;
+  height: 100%;
+}
+.welcome_page .welcome_page_features .image_maaref .img_close {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .welcome_page .welcome_page_features .image_maaref .img_close {
+    width: 20px;
+    right: 3px;
+    top: 0px;
+  }
+}
+.welcome_page .setting_menu {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: 999;
+  width: 330px;
+  right: 30px;
+  top: 60px;
+  padding: 23px;
+  height: 283px;
+  -webkit-box-shadow: 0 0 2px #a3a3a3;
+          box-shadow: 0 0 2px #a3a3a3;
+  display: none;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu {
+    width: 250px;
+    height: 210px;
+  }
+}
+.welcome_page .setting_menu.block {
+  display: block;
+}
+.welcome_page .setting_menu .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.welcome_page .setting_menu .header .img {
+  width: 48px;
+  height: 48px;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .header .img {
+    height: 40px;
+    width: 40px;
+  }
+}
+.welcome_page .setting_menu .header .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.welcome_page .setting_menu .header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .header h3 {
+    font-size: 15px;
+  }
+}
+.welcome_page .setting_menu .header p {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .header p {
+    font-size: 12px;
+  }
+}
+.welcome_page .setting_menu .profile,
+.welcome_page .setting_menu .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .profile,
+  .welcome_page .setting_menu .password {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .profile .img,
+  .welcome_page .setting_menu .password .img {
+    width: 18px;
+  }
+}
+.welcome_page .setting_menu .profile .img img,
+.welcome_page .setting_menu .password .img img {
+  width: 100%;
+  height: 100%;
+}
+.welcome_page .setting_menu .profile p,
+.welcome_page .setting_menu .password p {
+  font-size: 16px;
+  color: #212121;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .profile p,
+  .welcome_page .setting_menu .password p {
+    font-size: 13px;
+  }
+}
+.welcome_page .setting_menu .logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #a3a3a3;
+  padding-top: 20px;
+  color: #eb0000;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .logout {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .logout .img {
+    width: 18px;
+  }
+}
+.welcome_page .setting_menu .logout .img img {
+  width: 100%;
+  height: 100%;
+}
+.welcome_page .setting_menu .logout p {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .welcome_page .setting_menu .logout p {
+    font-size: 13px;
+  }
+}
+.welcome_page .schedule_overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+.welcome_page .schedule_overlay.block {
+  visibility: visible;
+}
+.welcome_page .schedule_overlay .overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(33, 33, 33, 0.431372549);
+}
+.welcome_page .schedule_overlay .schedules_container {
+  z-index: 9999999;
+  background-color: #fff;
+  width: 550px;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #dddddd;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container {
+    width: 450px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .schedule_overlay .schedules_container {
+    height: auto;
+    width: 300px;
+    padding-bottom: 30px;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .head {
+  height: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #dddddd;
+  padding-top: 10px;
+  padding-left: 12px;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container .head {
+    height: 60px;
+  }
+}
+@media (max-width: 425px) {
+  .welcome_page .schedule_overlay .schedules_container .head {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .head h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 28px;
+  color: #5872e0;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container .head h2 {
+    font-size: 20px;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+@media (max-width: 425px) {
+  .welcome_page .schedule_overlay .schedules_container .boxs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .boxs .box {
+  width: 240px;
+  height: 160px;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  border: 1px solid #dddddd;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container .boxs .box {
+    width: 200px;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .boxs .box a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+.welcome_page .schedule_overlay .schedules_container .boxs .box a img {
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container .boxs .box a img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.welcome_page .schedule_overlay .schedules_container .boxs .box a h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+@media (max-width: 992px) {
+  .welcome_page .schedule_overlay .schedules_container .boxs .box a h3 {
+    font-size: 15px;
+  }
+}
+
+@-webkit-keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 30px;
+}
+.user_profile .overlay.active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(163, 163, 163, 0.0901960784);
+  z-index: 99;
+}
+.user_profile .nav_bar {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  border-bottom: 1px solid #dddddd;
+}
+@media (max-width: 1360px) {
+  .user_profile .nav_bar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 60px;
+  }
+}
+.user_profile .nav_bar .icon {
+  cursor: pointer;
+}
+.user_profile .nav_bar .icon i {
+  color: #5872e0;
+  font-size: 30px;
+}
+.user_profile .nav_bar .avatar {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.user_profile .nav_bar .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user_profile .nav_bar .setting_menu {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: 999;
+  width: 330px;
+  right: 30px;
+  top: 60px;
+  padding: 23px;
+  height: 283px;
+  -webkit-box-shadow: 0 0 2px #a3a3a3;
+          box-shadow: 0 0 2px #a3a3a3;
+  display: none;
+}
+@media (max-width: 1360px) {
+  .user_profile .nav_bar .setting_menu {
+    top: 50px;
+    right: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu {
+    width: 250px;
+    height: 210px;
+  }
+}
+.user_profile .nav_bar .setting_menu.block {
+  display: block;
+}
+.user_profile .nav_bar .setting_menu .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.user_profile .nav_bar .setting_menu .header .img {
+  width: 48px;
+  height: 48px;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .header .img {
+    height: 40px;
+    width: 40px;
+  }
+}
+.user_profile .nav_bar .setting_menu .header .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user_profile .nav_bar .setting_menu .header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .header h3 {
+    font-size: 15px;
+  }
+}
+.user_profile .nav_bar .setting_menu .header p {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin-top: 5px;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .header p {
+    font-size: 12px;
+  }
+}
+.user_profile .nav_bar .setting_menu .profile,
+.user_profile .nav_bar .setting_menu .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .profile,
+  .user_profile .nav_bar .setting_menu .password {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .profile .img,
+  .user_profile .nav_bar .setting_menu .password .img {
+    width: 18px;
+  }
+}
+.user_profile .nav_bar .setting_menu .profile .img img,
+.user_profile .nav_bar .setting_menu .password .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .nav_bar .setting_menu .profile p,
+.user_profile .nav_bar .setting_menu .password p {
+  font-size: 16px;
+  color: #212121;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .profile p,
+  .user_profile .nav_bar .setting_menu .password p {
+    font-size: 13px;
+  }
+}
+.user_profile .nav_bar .setting_menu .logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #a3a3a3;
+  padding-top: 20px;
+  color: #eb0000;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .logout {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .logout .img {
+    width: 18px;
+  }
+}
+.user_profile .nav_bar .setting_menu .logout .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .nav_bar .setting_menu .logout p {
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  .user_profile .nav_bar .setting_menu .logout p {
+    font-size: 13px;
+  }
+}
+.user_profile .dashboard_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 9999;
+  border-right: 1px solid #dddddd;
+  width: 280px;
+  height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu {
+    width: 240px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .dashboard_menu {
+    left: -100%;
+  }
+}
+.user_profile .dashboard_menu.active {
+  left: 0;
+}
+.user_profile .dashboard_menu .logo {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px;
+  gap: 10px;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu .logo {
+    height: 60px;
+    padding: 15px;
+  }
+}
+.user_profile .dashboard_menu .logo .img {
+  width: 36px;
+  height: 36px;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu .logo .img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.user_profile .dashboard_menu .logo .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .dashboard_menu .logo h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 25px;
+  color: #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu .logo h2 {
+    font-size: 17px;
+  }
+}
+.user_profile .dashboard_menu ul {
+  padding: 20px;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu ul {
+    padding: 10px;
+  }
+}
+.user_profile .dashboard_menu ul li a {
+  color: #5e5e5e;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  height: 55px;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.user_profile .dashboard_menu ul li a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.user_profile .dashboard_menu ul li a.active {
+  background-color: #5872e0;
+  color: #fff;
+}
+@media (max-width: 1360px) {
+  .user_profile .dashboard_menu ul li a {
+    font-size: 15px;
+    height: 45px;
+  }
+}
+.user_profile .container {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  padding: 30px;
+  background-color: #fcfcfc;
+  min-height: calc(100vh - 80px);
+}
+@media (max-width: 1360px) {
+  .user_profile .container {
+    left: 240px;
+    top: 60px;
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .container {
+    left: 0;
+  }
+}
+.user_profile .profile_content {
+  border: 1px solid #dddddd;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+}
+.user_profile .profile_content h2 {
+  color: #5872e0;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 30px;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content h2 {
+    text-align: center;
+  }
+}
+.user_profile .profile_content .profile_photo {
+  text-align: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content .profile_photo {
+    margin-top: -10px;
+  }
+}
+.user_profile .profile_content .profile_photo input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  opacity: 0;
+  cursor: pointer;
+}
+.user_profile .profile_content .profile_photo .photo {
+  width: 114px;
+  height: 114px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content .profile_photo .photo {
+    width: 80px;
+    height: 80px;
+  }
+}
+.user_profile .profile_content .profile_photo .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user_profile .profile_content .profile_photo p {
+  font-size: 16px;
+  color: #a3a3a3;
+  margin-top: 10px;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content .profile_photo p {
+    font-size: 12px;
+  }
+}
+.user_profile .profile_content form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content form .input {
+    gap: 0px;
+  }
+}
+.user_profile .profile_content form .input.passwors_input {
+  margin-bottom: 20px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content form .input.passwors_input {
+    width: 100%;
+  }
+}
+.user_profile .profile_content form .input.passwors_input input {
+  width: 477px;
+  height: 60px;
+  border-radius: 8px;
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content form .input.passwors_input input {
+    width: 100%;
+  }
+}
+.user_profile .profile_content form .input.passwors_input .img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  z-index: 2;
+  width: 50px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.user_profile .profile_content form .input label {
+  color: #5872e0;
+  font-size: 24px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 800;
+  margin-bottom: -15px;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content form .input label {
+    font-size: 17px;
+    margin-bottom: -10px;
+  }
+}
+.user_profile .profile_content form .input input {
+  color: #212121;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  width: 600px;
+  height: 48px;
+  padding: 10px;
+  font-size: 16px;
+}
+.user_profile .profile_content form .input input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.user_profile .profile_content form .input input::-moz-placeholder {
+  font-size: 16px;
+}
+.user_profile .profile_content form .input input:-ms-input-placeholder {
+  font-size: 16px;
+}
+.user_profile .profile_content form .input input::-ms-input-placeholder {
+  font-size: 16px;
+}
+.user_profile .profile_content form .input input::placeholder {
+  font-size: 16px;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content form .input input {
+    height: 40px;
+    width: 550px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content form .input input {
+    width: 100%;
+  }
+}
+.user_profile .profile_content form .input p {
+  font-size: 18px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  margin-top: 5px;
+  font-weight: 700;
+  color: #a3a3a3;
+}
+@media (max-width: 1360px) {
+  .user_profile .profile_content form .input p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+}
+.user_profile .profile_content form .multy_inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content form .multy_inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10px;
+  }
+}
+.user_profile .profile_content form .multy_inputs .input {
+  width: 205px;
+}
+@media (max-width: 425px) {
+  .user_profile .profile_content form .multy_inputs .input {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+.user_profile .profile_content form .multy_inputs .input input {
+  width: 100%;
+}
+.user_profile .profile_content form .btn {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  color: #fff;
+  width: 158px;
+  height: 52px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16;
+  font-weight: 500;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+.user_profile .profile_content form .btn.change_password {
+  width: 220px;
+}
+.user_profile .complaint {
+  position: absolute;
+  bottom: 0;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  background-color: #d9e5ff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint {
+    top: 60px;
+    left: 240px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .complaint {
+    left: 0;
+  }
+}
+.user_profile .complaint .exchang_messages {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.user_profile .complaint .exchang_messages::-webkit-scrollbar {
+  width: 3px;
+}
+.user_profile .complaint .exchang_messages .user_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 20px;
+  margin: 10px 0;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .user_message {
+    gap: 10px;
+  }
+}
+.user_profile .complaint .exchang_messages .user_message .img {
+  width: 85px;
+  height: 85px;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .user_message .img {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .exchang_messages .user_message .img {
+    width: 35px;
+    height: 35px;
+  }
+}
+.user_profile .complaint .exchang_messages .user_message .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.user_profile .complaint .exchang_messages .user_message .message {
+  background: #fff;
+  color: #5872e0;
+  font-size: 25px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 35px 35px 35px 0;
+  height: auto;
+  max-width: 550px;
+  line-height: 1.2;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .user_message .message {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 500;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .exchang_messages .user_message .message {
+    font-size: 12px;
+    line-height: 1.1;
+    border-radius: 15px 15px 15px 0;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .complaint .exchang_messages .user_message .message {
+    max-width: 230px;
+  }
+}
+.user_profile .complaint .exchang_messages .ai_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .ai_message {
+    gap: 10px;
+  }
+}
+.user_profile .complaint .exchang_messages .ai_message .img {
+  width: 85px;
+  height: 85px;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .ai_message .img {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .exchang_messages .ai_message .img {
+    width: 35px;
+    height: 35px;
+  }
+}
+.user_profile .complaint .exchang_messages .ai_message .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user_profile .complaint .exchang_messages .ai_message .message {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  color: #fff;
+  font-size: 25px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 35px 35px 35px 0;
+  max-width: 550px;
+  line-height: 1.2;
+  height: auto;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .exchang_messages .ai_message .message {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 500;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .exchang_messages .ai_message .message {
+    font-size: 12px;
+    line-height: 1.1;
+    border-radius: 15px 15px 15px 0;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .complaint .exchang_messages .ai_message .message {
+    max-width: 230px;
+  }
+}
+.user_profile .complaint .write_message {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  height: 65px;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .write_message {
+    height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .write_message {
+    height: 30px;
+  }
+}
+.user_profile .complaint .write_message input {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 35px;
+  font-size: 24px;
+  padding: 20px 30px;
+  color: #5e5e5e;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .write_message input {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .complaint .write_message input {
+    font-size: 12px;
+  }
+}
+.user_profile .complaint .write_message .img {
+  background-color: #5872e0;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .write_message .img {
+    width: 45px;
+    height: 45px;
+  }
+}
+.user_profile .complaint .write_message .img img {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 1360px) {
+  .user_profile .complaint .write_message .img img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.user_profile .quality_standards {
+  position: absolute;
+  bottom: 0;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fcfcfc;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards {
+    top: 60px;
+    left: 240px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .quality_standards {
+    left: 0;
+    padding-bottom: 0;
+  }
+}
+.user_profile .quality_standards .box {
+  width: 630px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box {
+    width: 450px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .box {
+    width: 300px;
+  }
+}
+.user_profile .quality_standards .box .btn {
+  border: 1px solid #fff;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  height: 80px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.user_profile .quality_standards .box .btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box .btn {
+    height: 50px;
+    border-radius: 15px;
+  }
+}
+.user_profile .quality_standards .box .btn p {
+  font-size: 32px;
+  color: #fff;
+  font-family: "Baloo Tammudu 2", system-ui;
+  margin-top: 15px;
+  font-weight: 700;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box .btn p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .box .btn p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+.user_profile .quality_standards .box .img {
+  width: 580px;
+  height: 450px;
+  margin: auto;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box .img {
+    width: 100%;
+    height: 270px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .box .img {
+    height: 200px;
+  }
+}
+.user_profile .quality_standards .box .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .quality_standards .box .text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 560px;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box .text {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+.user_profile .quality_standards .box .text p {
+  color: #fff;
+  font-size: 28px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 700;
+  width: 100%;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .box .text p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .box .text p {
+    font-size: 12px;
+  }
+}
+.user_profile .quality_standards .next_img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 70px;
+  cursor: pointer;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .next_img {
+    right: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .next_img {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+  }
+  .user_profile .quality_standards .next_img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.user_profile .quality_standards .next_img.last {
+  -webkit-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
+  left: 100px;
+  right: auto;
+}
+@media (max-width: 1360px) {
+  .user_profile .quality_standards .next_img.last {
+    left: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .quality_standards .next_img.last {
+    left: 10px;
+  }
+}
+.user_profile .quality_standards .next_img.none {
+  display: none;
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile .maps {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 280px;
+  padding: 20px;
+  background-color: #fcfcfc;
+}
+@media (max-width: 1360px) {
+  .user_profile .maps {
+    left: 240px;
+    top: 60px;
+    bottom: auto;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .maps {
+    left: 0;
+  }
+}
+.user_profile .maps .maps_container {
+  border: 1px solid #5872e0;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .user_profile .maps .maps_container {
+    padding: 15px;
+  }
+}
+.user_profile .maps .maps_container h2 {
+  font-size: 30px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  color: #5872e0;
+  font-weight: 700;
+}
+@media (max-width: 425px) {
+  .user_profile .maps .maps_container h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.user_profile .maps .maps_container .all_maps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1360px) {
+  .user_profile .maps .maps_container .all_maps {
+    padding: 0;
+    gap: 15px;
+  }
+}
+.user_profile .maps .maps_container .all_maps .map {
+  width: 490px;
+  height: 350px;
+  border: 1px solid #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .user_profile .maps .maps_container .all_maps .map {
+    width: calc(50% - 10px);
+    height: 200px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .maps .maps_container .all_maps .map {
+    width: 100%;
+  }
+}
+.user_profile .maps .maps_container .all_maps .map img {
+  width: 345px;
+  height: 100%;
+  margin: auto;
+}
+@media (max-width: 992px) {
+  .user_profile .maps .maps_container .all_maps .map img {
+    width: 250px;
+  }
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile .degrees {
+  position: absolute;
+  top: 80px;
+  left: 280px;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  background-color: #fcfcfc;
+}
+@media (max-width: 1360px) {
+  .user_profile .degrees {
+    top: 60px;
+    left: 240px;
+    padding: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .degrees {
+    left: 0;
+    bottom: auto;
+  }
+}
+.user_profile .degrees .degrees_content {
+  border: 1px solid #5872e0;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+.user_profile .degrees .degrees_content h2 {
+  font-size: 30px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 700;
+  color: #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .degrees .degrees_content h2 {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .degrees .degrees_content h2 {
+    text-align: center;
+  }
+}
+.user_profile .degrees .degrees_content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .user_profile .degrees .degrees_content ul {
+    gap: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .degrees .degrees_content ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.user_profile .degrees .degrees_content ul li {
+  color: #5872e0;
+  border: 1px solid #5872e0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.user_profile .degrees .degrees_content ul li:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 1360px) {
+  .user_profile .degrees .degrees_content ul li {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .degrees .degrees_content ul li {
+    font-size: 11px;
+    padding: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .degrees .degrees_content ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+.user_profile .degrees .degrees_content ul li.active {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+}
+.user_profile .degrees .degrees_content .degree_text {
+  border: 1px solid #5872e0;
+  border-radius: 12px;
+}
+@media (max-width: 992px) {
+  .user_profile .degrees .degrees_content .degree_text {
+    margin-bottom: 20px;
+  }
+}
+.user_profile .degrees .degrees_content .degree_text h3 {
+  font-size: 20px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  border-bottom: 1px solid #5872e0;
+  padding: 10px;
+  color: #5872e0;
+  padding-bottom: 0px;
+}
+@media (max-width: 1360px) {
+  .user_profile .degrees .degrees_content .degree_text h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .degrees .degrees_content .degree_text h3 {
+    text-align: center;
+  }
+}
+.user_profile .degrees .degrees_content .degree_text .degreee {
+  padding: 20px 10px;
+  padding-bottom: 50px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+@media (max-width: 1360px) {
+  .user_profile .degrees .degrees_content .degree_text .degreee {
+    font-size: 12px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .degrees .degrees_content .degree_text .degreee {
+    text-align: center;
+  }
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile .questionnaire_intro {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  right: 20px;
+  height: 340px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro {
+    top: 80px;
+    left: 260px;
+    height: 250px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .questionnaire_intro {
+    left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro {
+    padding: 10px;
+    height: auto;
+  }
+}
+.user_profile .questionnaire_intro h2 {
+  font-size: 30px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  color: #fff;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .questionnaire_intro h2 {
+    text-align: center;
+  }
+}
+.user_profile .questionnaire_intro .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 425px) {
+  .user_profile .questionnaire_intro .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .img_desc {
+    gap: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .questionnaire_intro .box .img_desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc .text {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .img_desc .text {
+    margin-bottom: 0;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc .text h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 35px;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .img_desc .text h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .img_desc .text h2 {
+    font-size: 20px;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc .text h3 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.1;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .img_desc .text h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .img_desc .text h3 {
+    font-size: 17px;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc .img {
+  width: 280px;
+  height: 215px;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .img_desc .img {
+    width: 200px;
+    height: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .img_desc .img {
+    width: 150px;
+    height: 130px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .questionnaire_intro .box .img_desc .img {
+    width: 230px;
+    height: 160px;
+  }
+}
+.user_profile .questionnaire_intro .box .img_desc .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .questionnaire_intro .box .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 80px;
+  width: 260px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  position: relative;
+  right: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.user_profile .questionnaire_intro .box .btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .btn {
+    width: 200px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .btn {
+    right: 0;
+    width: 150px;
+    gap: 10px;
+    height: 45px;
+    border-radius: 10px;
+  }
+}
+.user_profile .questionnaire_intro .box .btn h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #5872e0;
+  height: 60px;
+  font-family: "Baloo Tammudu 2", system-ui;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .btn h2 {
+    font-size: 25px;
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .btn h2 {
+    font-size: 17px;
+    height: 30px;
+  }
+}
+.user_profile .questionnaire_intro .box .btn .img {
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 1360px) {
+  .user_profile .questionnaire_intro .box .btn .img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .questionnaire_intro .box .btn .img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.user_profile .questionnaire_intro .box .btn .img img {
+  width: 100%;
+  height: 100%;
+}
+.user_profile .subject_questions {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  padding: 30px;
+  background-color: #fcfcfc;
+  bottom: auto;
+}
+@media (max-width: 1360px) {
+  .user_profile .subject_questions {
+    left: 240px;
+    top: 60px;
+    padding: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .subject_questions {
+    left: 0;
+  }
+}
+.user_profile .subject_questions h2 {
+  font-size: 30px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-weight: 700;
+  color: #5872e0;
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions h2 {
+    text-align: center;
+  }
+}
+.user_profile .subject_questions .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .btns .btn {
+    width: 100%;
+  }
+}
+.user_profile .subject_questions .btns .btn a {
+  border: 1px solid #5872e0;
+  background-color: #fff;
+  color: #5872e0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 25px;
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .btns .btn a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+.user_profile .subject_questions .btns .btn a.active {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  color: #fff;
+}
+.user_profile .subject_questions .questions {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #5872e0;
+  margin-bottom: 20px;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+.user_profile .subject_questions .questions h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 28px;
+}
+@media (max-width: 1360px) {
+  .user_profile .subject_questions .questions h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .questions h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.user_profile .subject_questions .questions h4 {
+  font-size: 20px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  color: #5872e0;
+  margin-top: -15px;
+}
+@media (max-width: 1360px) {
+  .user_profile .subject_questions .questions h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .questions h4 {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+.user_profile .subject_questions .questions ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.user_profile .subject_questions .questions ul li {
+  width: calc(33.3333333333% - 15px);
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  text-align: center;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.user_profile .subject_questions .questions ul li.active {
+  background-color: #d9e5ff;
+  color: #5872e0;
+  border: 1px solid #5872e0;
+}
+@media (max-width: 768px) {
+  .user_profile .subject_questions .questions ul li {
+    font-size: 13px;
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .questions ul li {
+    width: 100%;
+  }
+}
+.user_profile .subject_questions .btn_submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  color: #fff;
+}
+@media (max-width: 1360px) {
+  .user_profile .subject_questions .btn_submit {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .subject_questions .btn_submit {
+    text-align: center;
+    width: 100%;
+  }
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile .schedule_main {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  padding: 30px;
+  background-color: #fcfcfc;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main {
+    left: 240px;
+    top: 60px;
+    padding: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .schedule_main {
+    left: 0;
+  }
+}
+.user_profile .schedule_main .schedule_container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main .schedule_container {
+    padding: 10px 20px;
+  }
+}
+.user_profile .schedule_main .schedule_container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Baloo Tammudu 2", system-ui;
+  color: #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main .schedule_container h2 {
+    font-size: 23px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .schedule_main .schedule_container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .schedule_main .schedule_container h2 {
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+}
+.user_profile .schedule_main .schedule_container .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .user_profile .schedule_main .schedule_container .btns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .schedule_main .schedule_container .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
+.user_profile .schedule_main .schedule_container .btns .btn a {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #5872e0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #5872e0;
+  display: block;
+  width: 216px;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main .schedule_container .btns .btn a {
+    font-size: 14px;
+  }
+}
+.user_profile .schedule_main .schedule_container .btns .btn a.active {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(0%, #a5b7f3), color-stop(30%, #5872e0));
+  background: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+  color: #fff;
+  border-color: transparent;
+}
+.user_profile .schedule_main .schedule_container .schedule {
+  margin-top: 100px;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main .schedule_container .schedule {
+    margin-top: 30px;
+  }
+}
+.user_profile .schedule_main .schedule_container .schedule .table_img {
+  width: 520px;
+  height: 625px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+@media (max-width: 1360px) {
+  .user_profile .schedule_main .schedule_container .schedule .table_img {
+    height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .schedule_main .schedule_container .schedule .table_img {
+    width: 400px;
+    height: 380px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .schedule_main .schedule_container .schedule .table_img {
+    width: 300px;
+    height: 380px;
+  }
+}
+.user_profile .schedule_main .schedule_container .schedule .table_img img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.user_profile .course {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  padding: 30px;
+  background-color: #fcfcfc;
+  bottom: 0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course {
+    left: 240px;
+    top: 60px;
+    padding: 20px;
+    bottom: auto;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .course {
+    left: 0;
+  }
+}
+.user_profile .course .course_continer {
+  padding: 20px;
+  border: 1px solid #5872e0;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-animation: scaling 1s ease;
+          animation: scaling 1s ease;
+}
+.user_profile .course .course_continer h2 {
+  font-family: "Baloo Tammudu 2", system-ui;
+  font-size: 30px;
+  font-weight: 700;
+  color: #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .user_profile .course .course_continer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.user_profile .course .course_continer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: -10px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer ul {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .course .course_continer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+.user_profile .course .course_continer ul li {
+  border: 1px solid #5872e0;
+  border-radius: 8px;
+  color: #5872e0;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.user_profile .course .course_continer ul li:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+@media (max-width: 992px) {
+  .user_profile .course .course_continer ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer ul li {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}
+.user_profile .course .course_continer ul li.active {
+  background-color: #5872e0;
+  color: #fff;
+}
+.user_profile .course .course_continer .grades {
+  border: 1px solid #5872e0;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .grades {
+    margin-top: 15px;
+  }
+}
+.user_profile .course .course_continer .grades h3 {
+  color: #5872e0;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  padding-top: 10px;
+  border-bottom: 1px solid #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .grades h3 {
+    font-size: 15px;
+  }
+}
+.user_profile .course .course_continer .grades .grade_numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user_profile .course .course_continer .grades .grade_numbers .subject {
+  width: 20%;
+  height: 120px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #212121;
+}
+.user_profile .course .course_continer .grades .grade_numbers .subject:not(:last-child) {
+  border-right: 1px solid #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject {
+    height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject {
+    font-size: 10px;
+    height: 60px;
+  }
+}
+.user_profile .course .course_continer .grades .grade_numbers .subject .level {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject .level {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject .level {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.user_profile .course .course_continer .grades .grade_numbers .subject .number {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject .number {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .course .course_continer .grades .grade_numbers .subject .number {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.user_profile .course .course_continer .description_supject {
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 1px solid #5872e0;
+  min-height: 180px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .description_supject {
+    min-height: 140px;
+  }
+}
+.user_profile .course .course_continer .description_supject h2 {
+  color: #5872e0;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  padding-top: 10px;
+  border-bottom: 1px solid #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .description_supject h2 {
+    font-size: 15px;
+  }
+}
+.user_profile .course .course_continer .description_supject .text {
+  font-size: 16px;
+  padding: 20px;
+  color: #212121;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .description_supject .text {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .course .course_continer .description_supject .text {
+    font-size: 10px;
+    padding-top: 0px;
+  }
+}
+.user_profile .course .course_continer .goals {
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 1px solid #5872e0;
+  min-height: 180px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .goals {
+    min-height: 140px;
+  }
+}
+.user_profile .course .course_continer .goals h2 {
+  color: #5872e0;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Baloo Tammudu 2", system-ui;
+  padding-top: 10px;
+  border-bottom: 1px solid #5872e0;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .goals h2 {
+    font-size: 15px;
+  }
+}
+.user_profile .course .course_continer .goals .text {
+  font-size: 16px;
+  padding: 20px;
+}
+@media (max-width: 1360px) {
+  .user_profile .course .course_continer .goals .text {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .user_profile .course .course_continer .goals .text {
+    font-size: 10px;
+    padding-top: 0px;
+  }
+}
+.user_profile .course .course_continer .goals .text p {
+  margin-bottom: 10px;
+  color: #212121;
+}
+@keyframes scaling {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes ui_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ui_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

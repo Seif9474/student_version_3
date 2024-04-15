@@ -1,0 +1,180 @@
+.quality_standards {
+  position: absolute;
+  bottom: 0;
+  top: 80px;
+  right: 0;
+  left: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $third_bg_color;
+
+  @include desktop {
+    top: 60px;
+    left: 240px;
+  }
+
+  @include tablet {
+    left: 0;
+    padding-bottom: 0;
+  }
+
+  .box {
+    width: 630px;
+    background: $linear_bg_color;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+    animation: scaling 1s ease;
+
+    @include desktop {
+      width: 450px;
+    }
+
+    @include mobile {
+      width: 300px;
+    }
+
+    .btn {
+      border: 1px solid $white_color;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      height: 80px;
+      transition: $main_tarnsition;
+
+      &:active{
+        transform: scale(0.9)
+      }
+
+      @include desktop {
+        height: 50px;
+        border-radius: 15px;
+      }
+
+      p {
+        font-size: 32px;
+        color: $white_color;
+        font-family: "Baloo Tammudu 2", system-ui;
+        margin-top: 15px;
+        font-weight: 700;
+
+        @include desktop {
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 10px;
+        }
+
+        @include mobile {
+          font-size: 16px;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .img {
+      width: 580px;
+      height: 450px;
+      margin: auto;
+
+      @include desktop {
+        width: 100%;
+        height: 270px;
+      }
+
+      @include mobile {
+        height: 200px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 560px;
+
+      @include desktop {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      p {
+        color: $white_color;
+        font-size: 28px;
+        font-family: "Baloo Tammudu 2", system-ui;
+        font-weight: 700;
+        width: 100%;
+        line-height: 1.4;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        @include desktop {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .next_img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    cursor: pointer;
+
+    @include desktop {
+      right: 50px;
+    }
+
+    @include mobile{
+      width: 30px;
+      height: 30px;
+      right: 10px;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.last {
+      transform: rotate(180deg) translateY(50%);
+      left: 100px;
+      right: auto;
+
+      @include desktop {
+        left: 50px;
+      }
+
+      @include mobile{
+        left: 10px;
+      }
+    }
+
+    &.none {
+      display: none;
+    }
+  }
+}
+
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.7);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

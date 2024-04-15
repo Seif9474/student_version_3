@@ -1,0 +1,106 @@
+// IMPORT FONTS
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400..800&family=Inter:wght@100..900&display=swap");
+
+// APP COLORS & VARIABLES
+
+$main_color: #5872e0;
+$secondary_color: #a3a3a3;
+$error_color: #eb0000;
+$white_color: #fff;
+$secondary_bg_color: #d9e5ff;
+$third_bg_color: #fcfcfc;
+$text_color: #5e5e5e;
+$dark_color: #212121;
+$bordre_color: #dddddd;
+$linear_bg_color: linear-gradient(to right, #fff, #a5b7f3 0%, #5872e0 30%);
+$main_border_redius: 24px;
+$input_border_raduis: 10px;
+$main_padding: 35px;
+$main_tarnsition: 0.3s;
+
+// MIXIN
+
+@mixin center_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center_between_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// GLOBAL RULES
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+// MAKE RESPONSIVE DESIGN
+
+@mixin mobile-small {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin tablet-mini {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  @media (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1360px) {
+    @content;
+  }
+}
+
+.btn, .btn_submit {
+  transition: $main_tarnsition;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
